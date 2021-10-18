@@ -22,7 +22,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
-            android:hint="Name" />
+            android:hint="Id" />
 
         <EditText
             android:id="@+id/name_editText"
@@ -38,13 +38,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Name"
+            android:hint="Location"
             android:inputType="textPersonName"
             android:minHeight="48dp" />
 
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/layout_2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -67,5 +68,24 @@
             android:layout_weight="1"
             android:text="Delete" />
     </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteY="135dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_2">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="viewusers"
+            android:text="view"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="198dp"/>
+    </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

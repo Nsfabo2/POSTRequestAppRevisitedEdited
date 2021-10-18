@@ -27,7 +27,10 @@ class UpdateDeleteUserActivity : AppCompatActivity() {
         name_et = findViewById(R.id.name_editText)
         loc_et = findViewById(R.id.location_editText)
 
-        userID = id_et.text.toString()?.toInt()!!
+        if(id_et.text.isNotEmpty()){
+            userID = id_et.text.toString()?.toInt()!!
+        }
+
 
         update_button = findViewById(R.id.update_button)
         delete_button = findViewById(R.id.delete_button5)
@@ -40,7 +43,7 @@ class UpdateDeleteUserActivity : AppCompatActivity() {
                 id_et.setText("")
                 name_et.setText("")
                 loc_et.setText("")
-                Toast.makeText(applicationContext, "Save Success!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(applicationContext, "Updated Successfuly!", Toast.LENGTH_SHORT).show();
             })
         }
 
@@ -50,7 +53,7 @@ class UpdateDeleteUserActivity : AppCompatActivity() {
                 id_et.setText("")
                 name_et.setText("")
                 loc_et.setText("")
-                Toast.makeText(applicationContext, "Save Success!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(applicationContext, "Deleted Successfuly!", Toast.LENGTH_SHORT).show();
             })
         }
 
@@ -94,6 +97,10 @@ class UpdateDeleteUserActivity : AppCompatActivity() {
     }
     fun updel(view: android.view.View) {
         intent = Intent(applicationContext, UpdateDeleteUserActivity::class.java)
+        startActivity(intent)
+    }
+    fun viewusers(view: android.view.View) {
+        intent = Intent(applicationContext, MainActivity::class.java)
         startActivity(intent)
     }
 }
